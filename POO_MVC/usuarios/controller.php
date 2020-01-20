@@ -4,6 +4,7 @@ require_once('constants.php');
 require_once('model.php');
 require_once('view.php');
 
+
 function handler() {
     $event = VIEW_GET_USER;
     $uri = $_SERVER['REQUEST_URI'];

@@ -5,9 +5,9 @@ abstract class DBAbstractModel
 {
 
     private static $db_host = 'localhost';
-    private static $db_user = 'usuario';
-    private static $db_pass = 'contraseña';
-    protected $db_name = 'mydb';
+    private static $db_user = 'root';
+    private static $db_pass = '123456';
+    protected $db_name = 'pruebas';
     protected $query;
     protected $rows = array();
     private $conn;

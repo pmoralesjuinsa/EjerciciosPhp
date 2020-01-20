@@ -79,4 +79,26 @@ class Usuario extends DBAbstractModel
         $this->mensaje = 'Usuario modificado';
     }
 
+    # Eliminar un usuario
+    public function delete($user_email='') {
+        $this->query = "
+                DELETE FROM
+                usuarios
+                WHERE
+                email = '$user_email'
+                ";
+        $this->execute_single_query();
+        $this->mensaje = 'Usuario eliminado';
+    }
+
+    # Método constructor
+    function __construct() {
+        $this->db_name = 'book_example';
+    }
+
+    # Método destructor del objeto
+    function __destruct() {
+        unset($this);
+    }
+
 }
