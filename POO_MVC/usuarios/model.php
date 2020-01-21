@@ -98,7 +98,7 @@ class Usuario extends DBAbstractModel
 
     # Método destructor del objeto
     function __destruct() {
-        unset($this);
+//        unset($this);
     }
 
 }
