@@ -21,7 +21,7 @@ class Usuario extends DBAbstractModel
                         SELECT
                         id, nombre, apellido, email, clave
                         FROM
-                        usuarios
+                        alumnos
                         WHERE
                         email = '$user_email'
                         ";
@@ -36,7 +36,8 @@ class Usuario extends DBAbstractModel
             $this->mensaje = 'Usuario no encontrado';
         }
     }
-# Crear un nuevo usuario
+
+    # Crear un nuevo usuario
     public function set($user_data=array()) {
         if(array_key_exists('email', $user_data)) {
             $this->get($user_data['email']);
@@ -46,7 +47,7 @@ class Usuario extends DBAbstractModel
                 }
                 $this->query = "
                             INSERT INTO
-                            usuarios
+                            alumnos
                             (nombre, apellido, email, clave)
                             VALUES
                             ('$nombre', '$apellido', '$email', '$clave')
@@ -68,7 +69,7 @@ class Usuario extends DBAbstractModel
         }
         $this->query = "
                     UPDATE
-                    usuarios
+                    alumnos
                     SET
                     nombre='$nombre',
                     apellido='$apellido'
@@ -83,7 +84,7 @@ class Usuario extends DBAbstractModel
     public function delete($user_email='') {
         $this->query = "
                 DELETE FROM
-                usuarios
+                alumnos
                 WHERE
                 email = '$user_email'
                 ";
@@ -93,7 +94,7 @@ class Usuario extends DBAbstractModel
 
     # Método constructor
     function __construct() {
-        $this->db_name = 'book_example';
+        $this->db_name = 'pruebas';
     }
 
     # Método destructor del objeto
