@@ -13,10 +13,10 @@ $diccionario = array(
         'VIEW_DELETE_USER'=>MODULO.VIEW_DELETE_USER.'/'
     ),
     'form_actions'=>array(
-        'SET'=>'/mvc/'.MODULO.SET_USER.'/',
-        'GET'=>'/mvc/'.MODULO.GET_USER.'/',
-        'DELETE'=>'/mvc/'.MODULO.DELETE_USER.'/',
-        'EDIT'=>'/mvc/'.MODULO.EDIT_USER.'/'
+        'SET'=>'../'.MODULO.SET_USER.'/',
+        'GET'=>'../'.MODULO.GET_USER.'/',
+        'DELETE'=>'../'.MODULO.DELETE_USER.'/',
+        'EDIT'=>'../'.MODULO.EDIT_USER.'/'
     )
 );
 
